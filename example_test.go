@@ -102,3 +102,18 @@ func ExampleDaysAfter() {
 	fmt.Println(result)
 	// Output: 2021-04-15T12:45:53Z
 }
+
+func ExampleIsWeekday() {
+	sun, _ := time.Parse(time.RFC3339, "2023-10-01T12:45:53Z")
+	tue, _ := time.Parse(time.RFC3339, "2023-10-03T12:45:53Z")
+	fmt.Println(IsWeekday(sun), IsWeekday(tue))
+	// Output: false true
+}
+
+func ExampleIsWeekend() {
+	sat, _ := time.Parse(time.RFC3339, "2023-09-30T12:45:53Z")
+	sun, _ := time.Parse(time.RFC3339, "2023-10-01T12:45:53Z")
+	mon, _ := time.Parse(time.RFC3339, "2023-10-02T12:45:53Z")
+	fmt.Println(IsWeekend(sat), IsWeekend(sun), IsWeekend(mon))
+	// Output: true true false
+}

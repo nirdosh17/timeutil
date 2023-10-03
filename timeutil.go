@@ -107,3 +107,24 @@ func DaysAgo(t time.Time, numDays int) time.Time {
 func DaysAfter(t time.Time, numDays int) time.Time {
 	return t.Add(time.Duration(numDays*24) * time.Hour)
 }
+
+// WeekDays are Monday to Friday
+var Weekdays = map[int]struct{}{1: {}, 2: {}, 3: {}, 4: {}, 5: {}}
+
+// WeekendDays are Saturday and Sunday
+// 0 = Sunday
+var WeekendDays = map[int]struct{}{6: {}, 0: {}}
+
+// IsWeekday returns true of given date falls on Monday to Friday.
+func IsWeekday(t time.Time) bool {
+	dn := int(t.Weekday())
+	_, ok := Weekdays[dn]
+	return ok
+}
+
+// IsWeekend returns true if given date is Saturday or Sunday.
+func IsWeekend(t time.Time) bool {
+	dn := int(t.Weekday())
+	_, ok := WeekendDays[dn]
+	return ok
+}
