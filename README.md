@@ -1,3 +1,5 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/nirdosh17/timeutil)](https://goreportcard.com/report/github.com/nirdosh17/timeutil)
+
 # Utility functions for Time
 Ruby on Rails inspired utility functions for **Go** to manipulate Time.
 
@@ -24,3 +26,6 @@ Ruby on Rails inspired utility functions for **Go** to manipulate Time.
 
 - `DaysAgo(Time, days) Time`
 - `DaysAfter(Time, days) Time`
+
+- `IsWeekday(Time) bool`
+- `IsWeekend(Time) bool`
