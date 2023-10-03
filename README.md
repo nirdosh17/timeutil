@@ -11,16 +11,16 @@ Ruby on Rails inspired utility functions for **Go** to manipulate Time.
 ```
 
 ## Available Functions
-- BeginningOfDay(Time) Time
-- BeginningOfHour(Time) Time
-- BeginningOfMinute(Time) Time
+- `BeginningOfDay(Time) Time`
+- `BeginningOfHour(Time) Time`
+- `BeginningOfMinute(Time) Time`
 
-- EndOfDay(Time) Time
-- EndOfHour(Time) Time
-- EndOfMinute(Time) Time
+- `EndOfDay(Time) Time`
+- `EndOfHour(Time) Time`
+- `EndOfMinute(Time) Time`
 
-- MonthsAgo(Time, days)
-- MonthsAfter(Time, days)
+- `MonthsAgo(Time, days) Time`
+- `MonthsAfter(Time, days) Time`
 
-- DaysAgo(Time, days)
-- DaysAfter(Time, days)
+- `DaysAgo(Time, days) Time`
+- `DaysAfter(Time, days) Time`
